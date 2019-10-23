@@ -1,0 +1,17 @@
+
+obsolete/
+
+# ignore Python temporary files
+*.pyc
+.ipynb_checkpoints/
+__pycache__/
+
+# ignore typical data files
+*.dat
+
+# ignore compressed files
+*.zip
+*.tar.gz
+
+# ignore PDF files
+*.pdf
