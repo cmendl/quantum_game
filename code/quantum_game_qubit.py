@@ -149,8 +149,8 @@ game_over = False
 # graphics
 
 doors = [pyglet.resource.image('door{}.png'.format(i)) for i in range(9)]
-door_open = pyglet.image.Animation.from_image_sequence(doors, period=0.2, loop=False)
-door_close = pyglet.image.Animation.from_image_sequence(reversed(doors), period=0.2, loop=False)
+door_open = pyglet.image.Animation.from_image_sequence(doors, duration=0.2, loop=False)
+door_close = pyglet.image.Animation.from_image_sequence(reversed(doors), duration=0.2, loop=False)
 
 main_batch = pyglet.graphics.Batch()
 

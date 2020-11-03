@@ -396,8 +396,8 @@ bloch_sphere_image = pyglet.resource.image('bloch_sphere.png')
 
 doors = [pyglet.resource.image('door{}.png'.format(i)) for i in range(9)]
 # TODO: also support door_r, door_u, door_d
-door_l_open_anim  = pyglet.image.Animation.from_image_sequence(doors, period=0.2, loop=False)
-door_l_close_anim = pyglet.image.Animation.from_image_sequence(reversed(doors), period=0.2, loop=False)
+door_l_open_anim  = pyglet.image.Animation.from_image_sequence(doors, duration=0.2, loop=False)
+door_l_close_anim = pyglet.image.Animation.from_image_sequence(reversed(doors), duration=0.2, loop=False)
 
 main_batch = pyglet.graphics.Batch()
 
