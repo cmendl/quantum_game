@@ -1,5 +1,9 @@
 Simple Toy Quantum Games
-========================
+------------------------
+
+<img src="screenshots/qubit_solved.png" width="400px" />
+
+<img src="screenshots/teleport.png" width="400px" />
 
 Basic quantum games implemented in Python / [Pyglet](http://pyglet.org).
 
