@@ -539,7 +539,7 @@ def on_key_press(symbol, modifiers):
             player_entangler = None
             player_entangler_qindex = -1
             show_doc_teleport = MessageState.hidden
-    elif symbol == key.LEFT or symbol == key.RIGHT or symbol == key.UP or symbol == key.DOWN:
+    elif  symbol == key.LEFT or symbol == key.RIGHT or symbol == key.UP or symbol == key.DOWN or symbol == key.A or symbol == key.D or symbol == key.W or symbol == key.S:
         show_doc_move = MessageState.hidden
 
 keys = key.KeyStateHandler()
@@ -674,10 +674,10 @@ def update(dt):
 
     # superimpose keyboard movement
     dpos_key = np.zeros(2)
-    if   keys[key.LEFT]:  dpos_key[0] -= 150*dt
-    elif keys[key.RIGHT]: dpos_key[0] += 150*dt
-    elif keys[key.UP]:    dpos_key[1] += 150*dt
-    elif keys[key.DOWN]:  dpos_key[1] -= 150*dt
+    if   keys[key.LEFT] or keys[key.A]:  dpos_key[0] -= 150*dt
+    elif keys[key.RIGHT] or keys[key.D]: dpos_key[0] += 150*dt
+    elif keys[key.UP] or keys[key.W]:    dpos_key[1] += 150*dt
+    elif keys[key.DOWN] or keys[key.S]:  dpos_key[1] -= 150*dt
 
     physics_update(player_pos, player_vel, dt, delta_pos=dpos_key, gammafrict=5)
 
